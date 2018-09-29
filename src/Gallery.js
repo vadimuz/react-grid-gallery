@@ -313,8 +313,8 @@ Gallery.displayName = 'Gallery';
 Gallery.propTypes = {
     images: PropTypes.arrayOf(
         PropTypes.shape({
-            nanoBase64: PropTypes.string,
             src: PropTypes.string.isRequired,
+            nano: PropTypes.string,
             alt: PropTypes.string,
             thumbnail: PropTypes.string.isRequired,
             srcset: PropTypes.array,
