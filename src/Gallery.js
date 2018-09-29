@@ -58,6 +58,7 @@ class Gallery extends Component {
     openLightbox (index, event) {
         if (event) {
             event.preventDefault();
+            event.stopPropagation();
         }
         if (this.props.lightboxWillOpen) {
             this.props.lightboxWillOpen.call(this, index);
@@ -312,6 +313,7 @@ Gallery.displayName = 'Gallery';
 Gallery.propTypes = {
     images: PropTypes.arrayOf(
         PropTypes.shape({
+            nanoBase64: PropTypes.string,
             src: PropTypes.string.isRequired,
             alt: PropTypes.string,
             thumbnail: PropTypes.string.isRequired,
