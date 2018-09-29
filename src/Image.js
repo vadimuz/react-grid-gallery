@@ -32,7 +32,7 @@ class Image extends Component {
     tileViewportStyle () {
         if (this.props.tileViewportStyle)
             return this.props.tileViewportStyle.call(this);
-        let nanoBase64Backgorund = {}
+        var nanoBase64Backgorund = {}
         if(this.props.item.nanoBase64) {
             nanoBase64Backgorund = { 
                 background: `url(${this.props.item.nanoBase64})`,
@@ -41,19 +41,17 @@ class Image extends Component {
             }
         }
         if (this.props.item.isSelected)
-            return {
+            return Object.assign({
                 width: this.props.item.vwidth -32,
                 height: this.props.height -32,
                 margin: 16,
                 overflow: "hidden",
-                ...nanoBase64Backgorund
-            };
-        return {
+            }, nanoBase64Backgorund);
+        return Object.assign({
             width: this.props.item.vwidth,
             height: this.props.height,
             overflow: "hidden",
-            ...nanoBase64Backgorund
-        };
+        }, nanoBase64Backgorund);
     }
 
     thumbnailStyle () {
