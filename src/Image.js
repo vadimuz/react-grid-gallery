@@ -33,9 +33,9 @@ class Image extends Component {
         if (this.props.tileViewportStyle)
             return this.props.tileViewportStyle.call(this);
         var nanoBase64Backgorund = {}
-        if(this.props.item.nanoBase64) {
+        if(this.props.item.nano) {
             nanoBase64Backgorund = { 
-                background: `url(${this.props.item.nanoBase64})`,
+                background: `url(${this.props.item.nano})`,
                 backgroundSize: 'cover',
                 backgroundPosition: 'center center'
             }
