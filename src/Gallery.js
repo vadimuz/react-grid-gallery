@@ -113,6 +113,7 @@ class Gallery extends Component {
 
     onSelectImage (index, event) {
         event.preventDefault();
+        event.stopPropagation();
         if(this.props.onSelectImage)
             this.props.onSelectImage.call(this, index, this.state.images[index]);
     }

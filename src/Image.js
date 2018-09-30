@@ -123,9 +123,9 @@ class Image extends Component {
         return (
                 <CheckButton key="Select"
             index={this.props.index}
-            color={"rgba(255, 255, 255, 0.7)"}
-            selectedColor={"#4285f4"}
-            hoverColor={"rgba(255, 255, 255, 1)"}
+            color={"rgba(102, 51, 153, 0.5)"}
+            selectedColor={"#639"}
+            hoverColor={"rgba(102, 51, 153, 0.75)"}
             isSelected={this.props.item.isSelected}
             isSelectable={this.props.isSelectable}
             onClick={this.props.isSelectable ?
